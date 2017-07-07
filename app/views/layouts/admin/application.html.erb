@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t ".page_title" %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "admin/application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "admin/application", "data-turbolinks-track": "reload" %>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <%= link_to t(".app_name"), admin_root_path, class: "navbar-brand" %>
+        </div>
+        <%= render "layouts/admin/sidebar_menu" %>
+      </nav>
+
+      <div id="page-wrapper">
+        <div class="container-fluid">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

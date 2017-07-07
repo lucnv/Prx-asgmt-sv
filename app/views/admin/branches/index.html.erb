@@ -1,0 +1,16 @@
+<% provide :navigation_branches, "active" %>
+<h2>All branches</h2>
+<hr/>
+<table class="table">
+  <thead>
+    <th><%= t ".id" %></th>
+    <th><%= t ".name" %></th>
+    <th><%= t ".address" %></th>
+    <th><%= t ".phone_number" %></th>
+    <th><%= t ".working_time" %></th>
+  </thead>
+  <tbody>
+    <%= render partial: "branch", collection: @branches, as: :branch %>
+  </tbody>
+</table>
+<%= paginate @branches %>

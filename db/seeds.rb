@@ -25,9 +25,11 @@ end
 
 puts "Create branches"
 15.times do
+  working_time = "#{Faker::Number.between 6, 8}:#{["00", "30"].sample} ~ #{Faker::Number.between 17, 21}:#{["00", "30"].sample}"
   Branch.create! name: Faker::Company.name,
     address: full_address_proc.call,
-    phone_number: Faker::PhoneNumber.cell_phone
+    phone_number: Faker::PhoneNumber.cell_phone,
+    working_time: working_time
 end
 
 sample_branches = Branch.limit 5
@@ -87,7 +89,7 @@ sample_branches.each do |branch|
         time: Faker::Time.between(7.days.ago, Time.zone.now, :day)
       # create order details
       total_price = 0
-      branch_products.sample(branch_products.size).each do |branch_product|
+      branch_products.sample(Faker::Number.between 1, 5).each do |branch_product|
         order_detail = order.order_details.build id: SecureRandom.uuid,
           product_id: branch_product.product_id,
           quantity: Faker::Number.between(1, 5),
