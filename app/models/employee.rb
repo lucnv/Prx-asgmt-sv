@@ -3,4 +3,7 @@ class Employee < ApplicationRecord
 
   belongs_to :branch
   has_many :orders
+
+  enum role: [:staff, :manager]
+  enum gender: [:male, :female]
 end
