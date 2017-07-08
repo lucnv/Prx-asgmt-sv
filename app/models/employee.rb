@@ -6,4 +6,6 @@ class Employee < ApplicationRecord
 
   enum role: [:staff, :manager]
   enum gender: [:male, :female]
+
+  delegate :name, to: :branch, prefix: true
 end
