@@ -1,8 +1,10 @@
 class BranchDetailsController < ApplicationController
   before_action :authenticate_user!, :authorize_branch
 
+  layout "branch/application"
+
   def branch
-    Branch.find params[:branch_id] || params[:id]
+    @branch ||= Branch.find params[:branch_id] || params[:id]
   end
 
   def authorize_branch

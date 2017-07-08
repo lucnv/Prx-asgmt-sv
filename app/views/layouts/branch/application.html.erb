@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FPT Shop Management | Admin</title>
+    <title>FPT Shop Management | <%= @branch.name %></title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag "admin/application", media: "all", "data-turbolinks-track": "reload" %>
-    <%= javascript_include_tag "admin/application", "data-turbolinks-track": "reload" %>
+    <%= stylesheet_link_tag "branch/application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "branch/application", "data-turbolinks-track": "reload" %>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
   </head>
@@ -12,8 +12,8 @@
   <body>
     <div id="wrapper">
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <%= render "layouts/admin/top_menu" %>
-        <%= render "layouts/admin/sidebar_menu" %>
+        <%= render "layouts/branch/top_menu", branch: @branch %>
+        <%= render "layouts/branch/sidebar_menu", branch: @branch %>
       </nav>
       <div id="page-wrapper">
         <div class="container-fluid">

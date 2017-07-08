@@ -1,0 +1,13 @@
+/*
+ *= require_self
+ *= require css/bootstrap.min
+ *= require_directory .
+ *= require ../kaminari
+ *= require css/sb-admin
+ */
+
+#page-wrapper {
+  font-size: 13px;
+  padding-bottom: 40px!important;
+  min-height: 100vh;
+}

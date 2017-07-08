@@ -6,16 +6,16 @@
       </li>
     <% end %>
     <li class="<%= yield :navigation_branches %>">
-      <%= link_to "My Branch", branch_path(branch_id) %>
+      <%= link_to "My Branch", branch_path(branch) %>
     </li>
     <li class="<%= yield :navigation_products %>">
-      <%= link_to "My Products", branch_branch_products_path(branch_id) %>
+      <%= link_to "My Products", branch_branch_products_path(branch) %>
     </li>
     <li class="<%= yield :navigation_employees %>">
-      <%= link_to "My Employees", branch_employees_path(branch_id) %>
+      <%= link_to "My Employees", branch_employees_path(branch) %>
     </li>
     <li class="<%= yield :navigation_customers %>">
-      <%= link_to "My Customers", branch_customers_path(branch_id) %>
+      <%= link_to "My Customers", branch_customers_path(branch) %>
     </li>
   </ul>
 </div>
