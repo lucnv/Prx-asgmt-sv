@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PrxAsgmtSv</title>
+    <title>FPT Shop Management</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "admin/application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "admin/application", "data-turbolinks-track": "reload" %>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
   </head>
 
   <body>
-    <div class="container">
+    <div>
       <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <div class="alert text-center alert-<%= message_type %>"><%= message %></div>
       <% end %>
-      <%= yield %>
     </div>
+    <% if user_logged_in? %>
+      <% branch_id = params[:id] || params[:branch_id] || current_user.branch_id %>
+      <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <%= render "layouts/top_menu", branch_id: branch_id %>
+          <%= render "layouts/sidebar_menu", branch_id: branch_id %>
+        </nav>
+    <% end %>
+        <div id="page-wrapper">
+          <div class="container-fluid">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
   </body>
 </html>

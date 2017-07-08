@@ -1,0 +1,21 @@
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+  <ul class="nav navbar-nav side-nav">
+    <% if current_user.admin? %>
+      <li class="<%= yield :navigation_all_branches %>">
+        <%= link_to "All Branches", admin_branches_path %>
+      </li>
+    <% end %>
+    <li class="<%= yield :navigation_branches %>">
+      <%= link_to "My Branch", branch_path(branch_id) %>
+    </li>
+    <li class="<%= yield :navigation_products %>">
+      <%= link_to "My Products", branch_branch_products_path(branch_id) %>
+    </li>
+    <li class="<%= yield :navigation_employees %>">
+      <%= link_to "My Employees", branch_employees_path(branch_id) %>
+    </li>
+    <li class="<%= yield :navigation_customers %>">
+      <%= link_to "My Customers", branch_customers_path(branch_id) %>
+    </li>
+  </ul>
+</div>

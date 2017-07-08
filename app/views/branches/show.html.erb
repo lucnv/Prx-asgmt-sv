@@ -1,0 +1,23 @@
+<% provide :navigation_branches, "active" %>
+<h2>All branches</h2>
+<hr/>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Working Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @branch.id %></td>
+      <td><%= @branch.name %></td>
+      <td><%= @branch.address %></td>
+      <td><%= @branch.phone_number %></td>
+      <td><%= @branch.working_time %></td>
+    </tr>
+  </tbody>
+</table>

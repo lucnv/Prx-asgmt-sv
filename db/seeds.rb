@@ -64,7 +64,7 @@ sample_branches.each do |branch|
       gender: Customer.genders.keys.sample,
       phone_number: Faker::PhoneNumber.cell_phone,
       address: full_address_proc.call,
-      point: Faker::Number.between(level * 20, level * 20 -1),
+      point: Faker::Number.between(level * 20, (level + 1) * 20 -1),
       level: level
   end
 end
