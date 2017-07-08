@@ -1,5 +1,5 @@
 class Admin::BranchesController < Admin::BaseController
   def index
-    @branches = Branch.page(params[:page]).per 10
+    @branches = Branch.all
   end
 end
