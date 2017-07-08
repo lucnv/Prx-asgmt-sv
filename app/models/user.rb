@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   class << self
     def valid_login? email, password
-      find_by(email: email).try :authenticate, password
+      find_by(email: email.try(:downcase)).try :authenticate, password
     end
   end
 end

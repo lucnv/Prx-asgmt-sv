@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "login" => "sessions#new"
+  post "login" => "sessions#create"
+  delete "logout" => "sessions#destroy"
 
-  root "admin/branches#index"
   namespace :admin do
     root "branches#index"
     resources :branches, only: :index
@@ -12,4 +13,6 @@ Rails.application.routes.draw do
   namespace :api do
     resources :auths, only: :create
   end
+  get "/*page", to: "static_pages#show"
+  root "static_pages#show", page: "home"
 end

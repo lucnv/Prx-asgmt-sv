@@ -10,9 +10,7 @@
   <body>
     <div id="wrapper">
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-          <%= link_to t(".app_name"), admin_root_path, class: "navbar-brand" %>
-        </div>
+        <%= render "layouts/admin/top_menu" %>
         <%= render "layouts/admin/sidebar_menu" %>
       </nav>
 
