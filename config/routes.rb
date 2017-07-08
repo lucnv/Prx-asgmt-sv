@@ -1,18 +1,4 @@
 Rails.application.routes.draw do
-  get 'orders/index'
-
-  get 'orders/show'
-
-  namespace :admin do
-    get 'orders/index'
-  end
-
-  namespace :admin do
-    get 'orders/show'
-  end
-
-  get 'synchronization_log/index'
-
   get "login" => "sessions#new"
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
