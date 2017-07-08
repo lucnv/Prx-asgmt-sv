@@ -31,6 +31,8 @@ gem "jbuilder", "~> 2.5"
 gem "bcrypt", "~> 3.1.7"
 gem "mysql2"
 gem "kaminari"
+gem "simple_command"
+gem "nokogiri"
 
 # Use Capistrano for deployment
 # gem "capistrano-rails", group: :development

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170708060632) do
+ActiveRecord::Schema.define(version: 20170708123217) do
 
   create_table "branch_products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "branch_id"
@@ -41,8 +41,6 @@ ActiveRecord::Schema.define(version: 20170708060632) do
   create_table "customers", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "id",                       null: false
     t.string   "email"
-    t.string   "first_name"
-    t.string   "last_name"
     t.integer  "gender"
     t.string   "phone_number"
     t.string   "address"
@@ -51,14 +49,13 @@ ActiveRecord::Schema.define(version: 20170708060632) do
     t.integer  "branch_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.string   "name"
     t.index ["id"], name: "index_customers_on_id", unique: true, using: :btree
   end
 
   create_table "employees", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "id",           null: false
     t.string   "email"
-    t.string   "first_name"
-    t.string   "last_name"
     t.integer  "gender"
     t.string   "phone_number"
     t.string   "address"
@@ -66,6 +63,7 @@ ActiveRecord::Schema.define(version: 20170708060632) do
     t.integer  "branch_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "name"
     t.index ["id"], name: "index_employees_on_id", unique: true, using: :btree
   end
 
