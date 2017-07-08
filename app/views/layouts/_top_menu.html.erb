@@ -1,5 +1,5 @@
 <div class="navbar-header">
-  <%= link_to "FPT Shop Management", admin_root_path, class: "navbar-brand" %>
+  <%= link_to "FPT Shop Management - Branch: #{branch_id}", "#", class: "navbar-brand" %>
 </div>
 
 <ul class="nav navbar-right top-nav">
@@ -9,7 +9,7 @@
     <% end %>
     <ul class="dropdown-menu">
       <li>
-        <%= link_to "Log out", logout_path, method: :delete %>
+        <%= link_to "Logout", logout_path, method: :delete %>
       </li>
     </ul>
   </li>

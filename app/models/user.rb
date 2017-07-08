@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   enum role: [:admin, :branch]
 
+  delegate :id, to: :branch, prefix: true, allow_nil: true
+
   def invalidate_token
     update_columns token: nil
   end

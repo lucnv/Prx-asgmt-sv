@@ -1,0 +1,19 @@
+<% provide :navigation_employees, "active" %>
+<h2>All branches</h2>
+<hr/>
+<table class="table table-hover" id="table-styled">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Fullname</th>
+      <th>Gender</th>
+      <th>Phone Number</th>
+      <th>Address</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "employee", collection: @employees, as: :employee %>
+  </tbody>
+</table>

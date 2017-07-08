@@ -12,6 +12,12 @@ Rails.application.routes.draw do
     resources :customers, only: :index
   end
 
+   resources :branches, only: :show do
+    resources :branch_products, only: :index
+    resources :employees, only: :index
+    resources :customers, only: :index
+  end
+
   namespace :api do
     resources :auths, only: :create
   end
