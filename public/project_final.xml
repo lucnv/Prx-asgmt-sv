@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<branch>
+    <general_info>
+        <id>1</id>
+        <name>Branch 1</name>
+        <address>HaNoi</address>
+        <telephone>042345789</telephone>
+        <working_time>07:00 - 22:00</working_time>
+    </general_info>
+
+    <employees>
+        <employee>
+            <id>d7dbc953-411f-4038-841e-00b00d9ea8e1</id>
+            <name>Benedick Powers</name>
+            <gender>0</gender>
+            <phone>46-(676)894-7386</phone>
+            <role>0</role>
+        </employee>
+        <employee>
+            <id>990894cd-c593-4de3-90bf-7d3325f3358e</id>
+            <name>Hersh Epilet</name>
+            <gender>0</gender>
+            <phone>63-(338)696-1182</phone>
+            <role>1</role>
+        </employee>
+        <employee>
+            <id>b7a5f6d2-d1bf-4934-ada4-7481cffc0e2b</id>
+            <name>Lorilee Doman</name>
+            <gender>0</gender>
+            <phone>81-(976)408-3671</phone>
+            <role>1</role>
+        </employee>
+        <employee>
+            <id>60e6554c-4e2a-4203-945a-ec9138380c0d</id>
+            <name>Rafaelia Nerney</name>
+            <gender>1</gender>
+            <phone>86-(660)901-3070</phone>
+            <role>1</role>
+        </employee>
+        <employee>
+            <id>78742294-68fb-49eb-b8a9-15f7252b5878</id>
+            <name>Carol-jean Oggers</name>
+            <gender>1</gender>
+            <phone>60-(782)943-9115</phone>
+            <role>1</role>
+        </employee>
+        <employee>
+            <id>282bdae7-6a4a-4559-913a-6f7911851ba9</id>
+            <name>Pace Behrend</name>
+            <gender>0</gender>
+            <phone>86-(342)597-9729</phone>
+            <role>1</role>
+        </employee>
+        <employee>
+            <id>c21e2a54-6f2f-4394-a515-40e7ea894ffa</id>
+            <name>Aloysius Lovemore</name>
+            <gender>0</gender>
+            <phone>55-(900)547-1187</phone>
+            <role>1</role>
+        </employee>
+        <employee>
+            <id>62c90d50-a8de-44f3-9cd9-8cf1da39b951</id>
+            <name>Halli Briffett</name>
+            <gender>0</gender>
+            <phone>48-(235)410-4979</phone>
+            <role>1</role>
+        </employee>
+        <employee>
+            <id>92b81c35-69dc-4091-8382-f4682873d340</id>
+            <name>Dayle Sarath</name>
+            <gender>0</gender>
+            <phone>62-(210)387-6183</phone>
+            <role>1</role>
+        </employee>
+        <employee>
+            <id>75979eae-38e6-42c8-b189-9abb763a6189</id>
+            <name>Sigfrid Eaglesham</name>
+            <gender>1</gender>
+            <phone>62-(553)406-9599</phone>
+            <role>1</role>
+        </employee>
+    </employees>
+
+    <customers>
+        <customer>
+            <id>5d4748d7-4670-4291-81c4-536204aecc20</id>
+            <name>Ofella Glencrosche</name>
+            <gender>1</gender>
+            <phone>46-(336)746-0798</phone>
+            <address>981 Lunder Road</address>
+            <point>75</point>
+            <level>2</level>
+        </customer>
+        <customer>
+            <id>a7a0fa35-42d4-4eb7-9c73-59c66e587875</id>
+            <name>Case Guido</name>
+            <gender>1</gender>
+            <phone>62-(810)670-3814</phone>
+            <address>68 Meadow Valley Circle</address>
+            <point>76</point>
+            <level>2</level>
+        </customer>
+        <customer>
+            <id>75c376ad-ced2-4dd7-99e4-3a053e393144</id>
+            <name>Allison Tortis</name>
+            <gender>1</gender>
+            <phone>62-(776)392-0277</phone>
+            <address>558 Claremont Terrace</address>
+            <point>76</point>
+            <level>0</level>
+        </customer>
+        <customer>
+            <id>481a1eb6-1fb6-4eb1-b96f-f7ac441f2cf4</id>
+            <name>Lucas Pollastrino</name>
+            <gender>1</gender>
+            <phone>7-(928)991-7538</phone>
+            <address>8038 Fremont Crossing</address>
+            <point>48</point>
+            <level>1</level>
+        </customer>
+        <customer>
+            <id>5eab0dd7-2c7e-4b8e-93c3-b0eda2eebf5d</id>
+            <name>Chickie Kryska</name>
+            <gender>1</gender>
+            <phone>1-(719)722-2662</phone>
+            <address>48 Golf View Alley</address>
+            <point>61</point>
+            <level>1</level>
+        </customer>
+        <customer>
+            <id>2f07ff76-c41f-4a5e-966c-c1a21007803f</id>
+            <name>Inessa Sinclar</name>
+            <gender>1</gender>
+            <phone>66-(490)975-7282</phone>
+            <address>7715 Daystar Trail</address>
+            <point>88</point>
+            <level>1</level>
+        </customer>
+        <customer>
+            <id>da09b1e1-d270-4d22-85a4-003ee2d9db6f</id>
+            <name>Jena Bloggett</name>
+            <gender>1</gender>
+            <phone>351-(740)601-5495</phone>
+            <address>756 Riverside Park</address>
+            <point>39</point>
+            <level>0</level>
+        </customer>
+        <customer>
+            <id>c9144ee1-7a23-44e2-99b9-1a1f7fe6d923</id>
+            <name>Allison Lower</name>
+            <gender>0</gender>
+            <phone>51-(368)246-5979</phone>
+            <address>10697 Bultman Place</address>
+            <point>16</point>
+            <level>0</level>
+        </customer>
+        <customer>
+            <id>753e2a43-e196-4e9d-9049-42acc772ba96</id>
+            <name>Zaccaria Lutsch</name>
+            <gender>0</gender>
+            <phone>237-(279)511-9531</phone>
+            <address>1118 Park Meadow Terrace</address>
+            <point>43</point>
+            <level>0</level>
+        </customer>
+        <customer>
+            <id>f2857f00-bcde-4686-9edb-fdecc03df607</id>
+            <name>Betteann Bahls</name>
+            <gender>0</gender>
+            <phone>62-(299)772-6413</phone>
+            <address>450 Carioca Lane</address>
+            <point>13</point>
+            <level>0</level>
+        </customer>
+    </customers>
+
+    <categories>
+        <category>
+            <id>1</id>
+            <name>BPhone</name>
+            <description>Design by BKAV</description>
+        </category>
+        <category>
+            <id>2</id>
+            <name>Apple</name>
+            <description>Apple phone</description>
+        </category>
+        <category>
+            <id>3</id>
+            <name>Oppo</name>
+            <description>Phone of Son Tung MTP</description>
+        </category>
+    </categories>
+
+    <products>
+        <product>
+            <id>1</id>
+            <category_id>1</category_id>
+            <name>BPhone1</name>
+            <price>5900000.0</price>
+            <quantity>69</quantity>
+        </product>
+        <product>
+            <id>2</id>
+            <category_id>1</category_id>
+            <name>Iphone 6</name>
+            <price>9000000.0</price>
+            <quantity>78</quantity>
+        </product>
+        <product>
+            <id>3</id>
+            <category_id>2</category_id>
+            <name>Oppo</name>
+            <price>9000000.0</price>
+            <quantity>87</quantity>
+        </product>
+        <product>
+            <id>4</id>
+            <category_id>3</category_id>
+            <name>Samsung</name>
+            <price>9000000.0</price>
+            <quantity>90</quantity>
+        </product>
+    </products>
+
+    <orders>
+        <order>
+            <id>5ac416ed-0f70-436b-a077-c62a49edc5c3</id>
+            <customer_id>f2857f00-bcde-4686-9edb-fdecc03df607</customer_id>
+            <employee_id>d7dbc953-411f-4038-841e-00b00d9ea8e1</employee_id>
+            <time>2017-07-08 16:37:01</time>
+            <total_price>23900000.0</total_price>
+            <order_details>
+                <order_detail>
+                    <id>4c6b6f73-22a2-4571-aa30-5f7aed141c05</id>
+                    <product_id>1</product_id>
+                    <quantity>14</quantity>
+                    <unit_price>5900000.0</unit_price>
+                </order_detail>
+                <order_detail>
+                    <id>a550a087-2f3b-4002-ad02-aa626b242e3a</id>
+                    <product_id>2</product_id>
+                    <quantity>17</quantity>
+                    <unit_price>9000000.0</unit_price>
+                </order_detail>
+                <order_detail>
+                    <id>6879b5dd-8077-4f6d-a9d7-e04eb3289c02</id>
+                    <product_id>3</product_id>
+                    <quantity>90</quantity>
+                    <unit_price>9000000.0</unit_price>
+                </order_detail>
+            </order_details>
+        </order>
+        <order>
+            <id>195408c7-b8d9-4566-8e43-fa6cca0a7188</id>
+            <customer_id>481a1eb6-1fb6-4eb1-b96f-f7ac441f2cf4</customer_id>
+            <employee_id>d7dbc953-411f-4038-841e-00b00d9ea8e1</employee_id>
+            <time>2017-07-18 16:37:01</time>
+            <total_price>14900000.0</total_price>
+            <order_details>
+                <order_detail>
+                    <id>76b3c101-9754-4c1f-9c1c-1bb3a0524d19</id>
+                    <product_id>1</product_id>
+                    <quantity>98</quantity>
+                    <unit_price>5900000.0</unit_price>
+                </order_detail>
+                <order_detail>
+                    <id>7bbbe0bc-efbb-4cbe-aa52-ffeea81bdcd6</id>
+                    <product_id>2</product_id>
+                    <quantity>69</quantity>
+                    <unit_price>9000000.0</unit_price>
+                </order_detail>
+            </order_details>
+        </order>
+        <order>
+            <id>367c873e-9612-4cbd-8892-8152b7bc8fd8</id>
+            <customer_id>5d4748d7-4670-4291-81c4-536204aecc20</customer_id>
+            <employee_id>282bdae7-6a4a-4559-913a-6f7911851ba9</employee_id>
+            <time>2017-01-18 16:37:01</time>
+            <total_price>5900000.0</total_price>
+            <order_details>
+                <order_detail>
+                    <id>16cc695c-aa74-4c38-8062-2b809cfc9b8f</id>
+                    <product_id>1</product_id>
+                    <quantity>34</quantity>
+                    <unit_price>5900000.0</unit_price>
+                </order_detail>
+            </order_details>
+        </order>
+        <order>
+            <id>8cf958a0-28b3-4f95-b784-c0349d99033d</id>
+            <customer_id>da09b1e1-d270-4d22-85a4-003ee2d9db6f</customer_id>
+            <employee_id>282bdae7-6a4a-4559-913a-6f7911851ba9</employee_id>
+            <time>2017-07-12 16:37:01</time>
+            <total_price>32900000.0</total_price>
+            <order_details>
+                <order_detail>
+                    <id>2a6d8e43-f3e2-4348-b3af-288f5ac6c329</id>
+                    <product_id>1</product_id>
+                    <quantity>71</quantity>
+                    <unit_price>5900000.0</unit_price>
+                </order_detail>
+                <order_detail>
+                    <id>3c6712ae-a47d-42f2-ba86-88b3f70330e1</id>
+                    <product_id>2</product_id>
+                    <quantity>91</quantity>
+                    <unit_price>9000000.0</unit_price>
+                </order_detail>
+                <order_detail>
+                    <id>2ae0653f-a74f-44fe-a82f-2d386a1bec6d</id>
+                    <product_id>3</product_id>
+                    <quantity>1</quantity>
+                    <unit_price>9000000.0</unit_price>
+                </order_detail>
+                <order_detail>
+                    <id>92b009e0-f768-44ca-b9f8-4820597099aa</id>
+                    <product_id>4</product_id>
+                    <quantity>4</quantity>
+                    <unit_price>9000000.0</unit_price>
+                </order_detail>
+            </order_details>
+        </order>
+    </orders>
+</branch>

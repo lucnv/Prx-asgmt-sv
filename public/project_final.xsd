@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="branch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="general_info"/>
+        <xs:element ref="employees"/>
+        <xs:element ref="customers"/>
+        <xs:element ref="categories"/>
+        <xs:element ref="products"/>
+        <xs:element ref="orders"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="general_info">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="name"/>
+        <xs:element ref="address"/>
+        <xs:element ref="telephone"/>
+        <xs:element ref="working_time"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="telephone" type="xs:integer"/>
+  <xs:element name="working_time" type="xs:string"/>
+  <xs:element name="employees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="employee"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="employee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="name"/>
+        <xs:element ref="gender"/>
+        <xs:element ref="phone"/>
+        <xs:element ref="role"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="role" type="xs:integer"/>
+  <xs:element name="customers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="customer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="customer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="name"/>
+        <xs:element ref="gender"/>
+        <xs:element ref="phone"/>
+        <xs:element ref="address"/>
+        <xs:element ref="point"/>
+        <xs:element ref="level"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="point" type="xs:integer"/>
+  <xs:element name="level" type="xs:integer"/>
+  <xs:element name="categories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="category"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="category">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="name"/>
+        <xs:element ref="description"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="products">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="product"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="category_id"/>
+        <xs:element ref="name"/>
+        <xs:element ref="price"/>
+        <xs:element ref="quantity"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="category_id" type="xs:integer"/>
+  <xs:element name="price" type="xs:decimal"/>
+  <xs:element name="orders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="order"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="customer_id"/>
+        <xs:element ref="employee_id"/>
+        <xs:element ref="time"/>
+        <xs:element ref="total_price"/>
+        <xs:element ref="order_details"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="customer_id" type="xs:string"/>
+  <xs:element name="employee_id" type="xs:string"/>
+  <xs:element name="time" type="xs:string"/>
+  <xs:element name="total_price" type="xs:decimal"/>
+  <xs:element name="order_details">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="order_detail"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="order_detail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="product_id"/>
+        <xs:element ref="quantity"/>
+        <xs:element ref="unit_price"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="product_id" type="xs:integer"/>
+  <xs:element name="unit_price" type="xs:decimal"/>
+  <xs:element name="id" type="xs:NMTOKEN"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="address" type="xs:string"/>
+  <xs:element name="gender" type="xs:integer"/>
+  <xs:element name="phone" type="xs:string"/>
+  <xs:element name="quantity" type="xs:integer"/>
+</xs:schema>

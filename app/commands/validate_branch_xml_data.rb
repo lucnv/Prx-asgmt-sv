@@ -1,19 +1,27 @@
 class ValidateBranchXmlData
   prepend SimpleCommand
 
-  # fill it after
-  XSD_SCHEMA_FILE_PATH = ""
+  XSD_SCHEMA_FILE_PATH = "public/project_final.xsd"
 
   def initialize file_path
     @file_path = file_path
   end
 
   def call
-    validate_file_extension && validate_against_schema
+    validate_presence_file && validate_file_extension && validate_against_schema
   end
 
   private
   attr_reader :file_path
+  def validate_presence_file
+    if file_path.present?
+      true
+    else
+      errors.add :validate_xml_file, "file does not exists"
+      false
+    end
+  end
+
   def validate_xml_file
     validate_file_extension && validate_against_schema
   end

@@ -104,3 +104,10 @@ sample_branches.each do |branch|
     end
   end
 end
+
+puts "Create Synchronization Logs"
+sample_branches.each do |branch|
+  status = SynchronizationLog.statuses.keys.sample
+  branch.synchronization_logs.create! status: status,
+    content: "Synchronize branch data #{status}"
+end

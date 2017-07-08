@@ -4,15 +4,19 @@ class SynchronizeBranchXmlData
   def initialize branch, file_path
     @branch = branch
     @file_path = file_path
+    @sync_result = {
+      branches: 0, employees: 0, customers: 0, branch_products: 0, orders: 0, order_details: 0
+    }
   end
 
   def call
     return unless validate_data_file && check_branch_permission
     sync_data
+    sync_result
   end
 
   private
-  attr_reader :file_path, :branch
+  attr_reader :file_path, :branch, :sync_result
 
   def validate_data_file
     validation_command = ValidateBranchXmlData.call file_path
@@ -30,7 +34,7 @@ class SynchronizeBranchXmlData
 
   def check_branch_permission
     data_branch_id = xml_data.at("general_info").at("id").content
-    if branch.id.to_s == data_branch_id
+    if branch && branch.id.to_s == data_branch_id
       true
     else
       errors.add :branch_permission, "You have no permission to synchronize data of this branch"
@@ -54,10 +58,12 @@ class SynchronizeBranchXmlData
 
   def sync_general_info
     general_info = xml_data.at "general_info"
-    branch.update_attributes! name: general_info.at("name").content,
+    branch.assign_attributes name: general_info.at("name").content,
       address: general_info.at("address").content,
       phone_number: general_info.at("telephone").content,
       working_time: general_info.at("working_time").content
+    count_changed_object branch
+    branch.save!
   end
 
   def sync_employees_data
@@ -69,6 +75,7 @@ class SynchronizeBranchXmlData
         phone_number: employee_data.at("phone").content,
         role: employee_data.at("role").content.to_i,
         branch: branch
+      count_changed_object employee
       employee.save!
     end
   end
@@ -84,6 +91,7 @@ class SynchronizeBranchXmlData
         point: customer_data.at("point").content,
         level: customer_data.at("level").content.to_i,
         branch: branch
+      count_changed_object customer
       customer.save!
     end
   end
@@ -94,6 +102,7 @@ class SynchronizeBranchXmlData
       product_id = product_data.at("id").content
       branch_product = BranchProduct.find_or_initialize_by branch: branch, product_id: product_id
       branch_product.assign_attributes quantity: product_data.at("quantity").content
+      count_changed_object branch_product
       branch_product.save!
     end
   end
@@ -107,6 +116,7 @@ class SynchronizeBranchXmlData
         time: order_data.at("time").content,
         total_price: order_data.at("total_price").content,
         branch: branch
+      count_changed_object order
       order.save!
       sync_order_details_data order, order_data.at("order_details")
     end
@@ -114,12 +124,18 @@ class SynchronizeBranchXmlData
 
   def sync_order_details_data order, order_details_data
     order_details_data.elements.each do |order_detail_data|
-      order_detail = OrderDetail.find_or_initialize_by id: qrorder_detail_data.at("id").content
+      order_detail = OrderDetail.find_or_initialize_by id: order_detail_data.at("id").content
       order_detail.assign_attributes order: order,
         product_id: order_detail_data.at("product_id").content,
         quantity: order_detail_data.at("quantity").content,
         unit_price: order_detail_data.at("unit_price").content
+      count_changed_object order_detail
       order_detail.save!
     end
+  end
+
+  def count_changed_object object
+    key = object.class.to_s.tableize.to_sym
+    sync_result[key] = sync_result[key].to_i + 1 if object.changed?
   end
 end

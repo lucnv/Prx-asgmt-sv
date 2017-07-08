@@ -1,7 +1,9 @@
 class Api::BaseController < ActionController::API
-  def require_login
+  include ActionController::HttpAuthentication::Token::ControllerMethods
+
+  def authenticate!
     unless authenticate_token
-      render json: {errors: [{detail: "Access denied"}]}, status: :unauthorized
+      render json: {errors: [{detail: "Access denied!"}]}, status: :unauthorized
     end
   end
 
