@@ -7,6 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 full_address_proc = Proc.new {"#{Faker::Address.street_address}, #{Faker::Address.city}"}
 
+puts "Create admin account"
+User.create! email: "admin@prx.com", password: "123456", role: :admin
+
+puts "Create branch accounts & branches"
+15.times do |i|
+  user = User.create! email: "branch#{i+1}@prx.com", password: "123456", role: :branch
+  working_time = "#{Faker::Number.between 6, 8}:#{["00", "30"].sample} ~ #{Faker::Number.between 17, 21}:#{["00", "30"].sample}"
+  Branch.create! user: user,
+    name: Faker::Company.name,
+    address: full_address_proc.call,
+    phone_number: Faker::PhoneNumber.cell_phone,
+    working_time: working_time
+end
+
 puts "Create categories"
 12.times do
   Category.create! name: Faker::Lorem.word,
@@ -21,15 +35,6 @@ Category.all.each do |category|
       description: Faker::Lorem.paragraph,
       price: Faker::Commerce.price
   end
-end
-
-puts "Create branches"
-15.times do
-  working_time = "#{Faker::Number.between 6, 8}:#{["00", "30"].sample} ~ #{Faker::Number.between 17, 21}:#{["00", "30"].sample}"
-  Branch.create! name: Faker::Company.name,
-    address: full_address_proc.call,
-    phone_number: Faker::PhoneNumber.cell_phone,
-    working_time: working_time
 end
 
 sample_branches = Branch.limit 5

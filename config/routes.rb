@@ -8,4 +8,8 @@ Rails.application.routes.draw do
     resources :categories, only: :index
     resources :products, only: :index
   end
+
+  namespace :api do
+    resources :auths, only: :create
+  end
 end
