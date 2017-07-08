@@ -1,14 +1,13 @@
 <% provide :navigation_categories, "active" %>
-<h2><%= t ".all_categories" %></h2>
+<h2>All categories</h2>
 <hr/>
-<table class="table">
+<table class="table table-hover" id="table-styled">
   <thead>
-    <th><%= t ".index" %>
-    <th><%= t ".name" %></th>
-    <th><%= t ".description" %></th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
   </thead>
   <tbody>
     <%= render partial: "category", collection: @categories, as: :category %>
   </tbody>
 </table>
-<%= paginate @categories %>
