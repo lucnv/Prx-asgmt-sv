@@ -45,8 +45,7 @@ sample_branches.each do |branch|
   number_of_employees.times do
     branch.employees.create! id: SecureRandom.uuid,
       email: Faker::Internet.email,
-      first_name: Faker::Name.first_name,
-      last_name: Faker::Name.last_name,
+      name: Faker::Name.name,
       gender: Employee.genders.keys.sample,
       phone_number: Faker::PhoneNumber.cell_phone,
       address: full_address_proc.call,
@@ -61,8 +60,7 @@ sample_branches.each do |branch|
     level = Customer.levels.values.sample
     branch.customers.create! id: SecureRandom.uuid,
       email: Faker::Internet.email,
-      first_name: Faker::Name.first_name,
-      last_name: Faker::Name.last_name,
+      name: Faker::Name.name,
       gender: Customer.genders.keys.sample,
       phone_number: Faker::PhoneNumber.cell_phone,
       address: full_address_proc.call,
