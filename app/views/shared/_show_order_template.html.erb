@@ -1,0 +1,22 @@
+<h2>Details of order</h2>
+<hr/>
+<div><b>Id</b>: <%= order.id %></div>
+<div><b>Branch name</b>: <%= order.branch_name %></div>
+<div><b>Customer name</b>: <%= order.customer_name %></div>
+<div><b>Employee name</b>: <%= order.employee_name %></div>
+<div><b>Time</b>: <%= order.time %></div>
+<div><b>Total price</b>: <%= order.total_price %></div>
+<h4>Order details</h4>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>Product name</th>
+      <th>Quantity</th>
+      <th>Unit price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "shared/order_detail", collection: order.order_details, as: :order_detail %>
+  </tbody>
+</table>

@@ -34,7 +34,7 @@ class SessionsController < ApplicationController
     if current_user.admin?
       redirect_to admin_root_path
     else
-      redirect_to root_path
+      redirect_to current_user.branch
     end
   end
 end

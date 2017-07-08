@@ -1,0 +1,9 @@
+<tr>
+  <td>
+    <%= index_of synchronization_log_counter, assigns["synchronization_logs"].current_page, 10 %>
+  </td>
+  <td><%= synchronization_log.branch_name %></td>
+  <td><%= synchronization_log.status %></td>
+  <td><%= simple_format synchronization_log.content %></td>
+  <td><%= synchronization_log.created_at %></td>
+</tr>

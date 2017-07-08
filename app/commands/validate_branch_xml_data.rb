@@ -30,7 +30,7 @@ class ValidateBranchXmlData
     if File.extname(file_path) == ".xml"
       true
     else
-      errors.add :validate_xml_file, "file extension is invalid, it is must be .xmlreload!"
+      errors.add :validate_xml_file, "file extension is invalid, it is must be .xml"
       false
     end
   end

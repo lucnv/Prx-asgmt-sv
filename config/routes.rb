@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'orders/index'
+
+  get 'orders/show'
+
+  namespace :admin do
+    get 'orders/index'
+  end
+
+  namespace :admin do
+    get 'orders/show'
+  end
+
+  get 'synchronization_log/index'
+
   get "login" => "sessions#new"
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
@@ -10,12 +24,16 @@ Rails.application.routes.draw do
     resources :products, only: :index
     resources :employees, only: :index
     resources :customers, only: :index
+    resources :synchronization_logs, only: :index
+    resources :orders, only: [:index, :show]
   end
 
    resources :branches, only: :show do
     resources :branch_products, only: :index
     resources :employees, only: :index
     resources :customers, only: :index
+    resources :synchronization_logs, only: :index
+    resources :orders, only: [:index, :show]
   end
 
   namespace :api do

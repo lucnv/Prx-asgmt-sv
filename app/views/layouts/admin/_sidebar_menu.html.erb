@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse navbar-ex1-collapse">
   <ul class="nav navbar-nav side-nav">
     <li class="<%= yield :navigation_branches %>">
-      <%= link_to "All Branches", admin_branches_path %>
+      <%= link_to "Branches", admin_branches_path %>
     </li>
     <li class="<%= yield :navigation_categories %>">
       <%= link_to "Categories", admin_categories_path %>
@@ -13,7 +13,13 @@
       <%= link_to "Employees", admin_employees_path %>
     </li>
     <li class="<%= yield :navigation_customers %>">
-      <%= link_to "Customer", admin_customers_path %>
+      <%= link_to "Customers", admin_customers_path %>
+    </li>
+    <li class="<%= yield :navigation_orders %>">
+      <%= link_to "Orders", admin_orders_path %>
+    </li>
+    <li class="<%= yield :navigation_synchronization_logs %>">
+      <%= link_to "Synchronization logs", admin_synchronization_logs_path %>
     </li>
   </ul>
 </div>

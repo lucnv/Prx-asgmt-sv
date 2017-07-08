@@ -17,5 +17,11 @@
     <li class="<%= yield :navigation_customers %>">
       <%= link_to "My Customers", branch_customers_path(branch) %>
     </li>
+    <li class="<%= yield :navigation_orders %>">
+      <%= link_to "My Orders", branch_orders_path(branch) %>
+    </li>
+    <li class="<%= yield :navigation_synchronization_logs %>">
+      <%= link_to "My synchronization logs", branch_synchronization_logs_path(branch) %>
+    </li>
   </ul>
 </div>

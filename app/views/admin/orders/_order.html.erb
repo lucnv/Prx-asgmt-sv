@@ -1,0 +1,9 @@
+<tr>
+  <td><%= index_of order_counter, assigns["orders"].current_page, 20 %></td>
+  <td><%= order.branch.name %></td>
+  <td><%= order.customer_name %></td>
+  <td><%= order.employee_name %></td>
+  <td><%= order.time %></td>
+  <td><%= order.total_price %></td>
+  <td><%= link_to "Details", admin_order_path(order) %></td>
+</tr>

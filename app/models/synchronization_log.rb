@@ -4,4 +4,6 @@ class SynchronizationLog < ApplicationRecord
   enum status: [:failed, :success]
 
   scope :recent_created, ->{order created_at: :desc}
+
+  delegate :name, to: :branch, prefix: true, allow_nil: true
 end
