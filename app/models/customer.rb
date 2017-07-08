@@ -6,4 +6,6 @@ class Customer < ApplicationRecord
 
   enum gender: [:male, :female]
   enum level: [:standard, :silver, :gold]
+
+  delegate :name, to: :branch, prefix: true
 end

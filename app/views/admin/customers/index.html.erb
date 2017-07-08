@@ -1,0 +1,19 @@
+<% provide :navigation_customers, "active" %>
+<h2>All Customers</h2>
+<hr/>
+<table class="table table-hover" id="table-styled">
+  <thead>
+    <th>ID</th>
+    <th>Email</th>
+    <th>Fullname</th>
+    <th>Gender</th>
+    <th>Phone Number</th>
+    <th>Address</th>
+    <th>Point</th>
+    <th>Level</th>
+    <th>Branch</th>
+  </thead>
+  <tbody>
+    <%= render partial: "customer", collection: @customers, as: :customer %>
+  </tbody>
+</table>

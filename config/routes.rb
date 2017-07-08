@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :branches, only: :index
     resources :categories, only: :index
     resources :products, only: :index
+    resources :employees, only: :index
+    resources :customers, only: :index
   end
 
   namespace :api do
