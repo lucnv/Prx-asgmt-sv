@@ -3,7 +3,7 @@
   <td><%= order.branch.name %></td>
   <td><%= order.customer_name %></td>
   <td><%= order.employee_name %></td>
-  <td><%= time_as_format order.time, :full_datatime %></td>
+  <td><%= time_as_format order.time, :full_datetime %></td>
   <td><%= order.total_price %></td>
   <td><%= link_to "Details", admin_order_path(order) %></td>
 </tr>
