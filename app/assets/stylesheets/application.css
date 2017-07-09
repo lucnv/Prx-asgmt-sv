@@ -26,6 +26,11 @@
 
 .logged_in {
   padding-top: 5px;
+  padding-right: 20px;
+}
+
+.navbar-right {
+  margin-right: 0!important;
 }
 
 .navbar-right a {
