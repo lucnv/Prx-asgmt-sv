@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :auths, only: :create
-    resources :sync_branches, only: :create
+    resources :sync_branches, only: [:create, :destroy]
   end
   get "/*page", to: "static_pages#show"
   root "static_pages#show", page: "home"
