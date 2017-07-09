@@ -5,6 +5,6 @@ class OrdersController < BranchDetailsController
   end
 
   def show
-    @order = @branch.orders.find params[:id]
+    @order = branch.orders.find params[:id]
   end
 end
