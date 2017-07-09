@@ -4,7 +4,7 @@
 <div><b>Branch name</b>: <%= order.branch_name %></div>
 <div><b>Customer name</b>: <%= order.customer_name %></div>
 <div><b>Employee name</b>: <%= order.employee_name %></div>
-<div><b>Time</b>: <%= order.time %></div>
+<div><b>Time</b>: <%= time_as_format order.time, :full_datetime %></div>
 <div><b>Total price</b>: <%= order.total_price %></div>
 <h4>Order details</h4>
 <table class="table">

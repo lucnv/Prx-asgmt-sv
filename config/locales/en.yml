@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  time:
+    formats:
+      full_datetime: "%Y/%m/%d %H:%M"

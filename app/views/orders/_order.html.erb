@@ -2,7 +2,7 @@
   <td><%= index_of order_counter, assigns["orders"].current_page, 20 %></td>
   <td><%= order.customer_name %></td>
   <td><%= order.employee_name %></td>
-  <td><%= order.time %></td>
+  <td><%= time_as_format order.time, :full_datetime %></td>
   <td><%= order.total_price %></td>
   <td><%= link_to "Details", branch_order_path(order.branch, order) %></td>
 </tr>

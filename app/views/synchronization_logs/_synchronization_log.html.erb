@@ -4,5 +4,5 @@
   </td>
   <td><%= synchronization_log.status %></td>
   <td><%= simple_format synchronization_log.content %></td>
-  <td><%= synchronization_log.created_at %></td>
+  <td><%= time_as_format synchronization_log.created_at, :full_datetime %></td>
 </tr>
