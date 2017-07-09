@@ -11,3 +11,21 @@
   padding-bottom: 40px!important;
   min-height: 100vh;
 }
+
+#table-styled {
+  border: thin solid #ddd;
+}
+
+.table>thead>tr>th {
+  border: thin solid #ddd!important;
+}
+.table>tbody>tr>td {
+  border: thin solid #ddd!important;
+}
+
+@media (min-width: 768px) {
+  .side-nav {
+    background-color: #2b442b!important;
+  }
+}
+
