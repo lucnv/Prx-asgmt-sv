@@ -1,5 +1,6 @@
 class Api::AuthsController < Api::BaseController
-  before_action :authenticate!
+  before_action :authenticate!, only: :destroy
+
   def create
     if user = User.valid_login?(params[:email], params[:password])
       user.regenerate_token
